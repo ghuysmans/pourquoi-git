@@ -1,0 +1,113 @@
+\documentclass[compress]{beamer}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[francais]{babel}
+\setbeamertemplate{caption}[numbered]
+\title{Introduction à Git}
+\author{Guillaume \textsc{Huysmans}}
+\bibliographystyle{plain}
+\newenvironment{envie}
+	{\begin{block}{Ce qu'on a envie de dire...}}
+	{\end{block}}
+\begin{document}
+\begin{frame}
+	\maketitle
+\end{frame}
+\begin{frame}
+	\frametitle{Plan}
+	\tableofcontents
+\end{frame}
+
+
+\section{Problématique}
+\begin{frame}
+	\frametitle{Collaboration}
+	Un jour ou l'autre, on aura un projet à faire à plusieurs.
+	Il devient nécessaire de fusionner les changements et de se synchroniser.
+
+	\begin{envie}
+	C'est faisable manuellement ! \pause
+	\end{envie}
+
+	\begin{itemize}
+		\item par e-mail / réseau social \pause (trop volumineux ?) \pause
+		\item par clé USB \pause (copier quoi ? dans quel sens ?) \pause
+		\item à la Google Docs \pause (et sans connexion ?) \pause
+		\item par un Drive quelconque \pause (conflits ?)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Un bon contrôle de versions}
+	\begin{itemize}
+		\item Synchronisation (semi-)automatique
+		\item Travail hors-ligne
+		\item Décentralisé (backups plus faciles)
+		\item Rapide (et cross-platform : GNU/Linux, Windows, OS X)
+		\item Historisé :
+			\begin{itemize}
+				\item Liste lisible des derniers changements
+				\item Qui a fait quoi ?
+				\item Possibilité de revenir en arrière
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\section{Solution}
+\begin{frame}
+	\frametitle{Git}
+	Selon les critères exposés juste avant, Git,
+	développé par Linus Torvalds (créateur de Linux),
+	est un bon système de contrôle de versions. %(VCS en angais).
+
+	\begin{itemize}
+		\item Utilisations : \pause
+			\begin{itemize}
+				\item Le noyau Linux :
+					\begin{itemize}
+						\item Plus de 18 millions de lignes
+						\item 91 Mo de texte compressé ! \pause
+					\end{itemize}
+				\item Des cours et manuels collaboratifs (à la Wiki) \pause
+				\item \url{https://github.com/steeve/france.code-civil} \pause
+			\end{itemize}
+		\item Hébergement connu : \url{https://github.com} \pause
+		\item Interfaces graphiques \pause
+		\item Gère avant tout du texte (gênant ?)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Du texte ?!}
+	Le code source d'un programme est \emph{déjà} du texte.
+	\pause
+
+	Les documents peuvent aussi en être : il suffit de les rédiger en
+	\LaTeX{} (comme cette présentation), Markdown... !
+	\pause
+
+	\begin{envie}
+		Qu'est-ce qu'on y gagne ? \pause
+	\end{envie}
+
+	Avantages :
+	\begin{itemize}
+		\item Fusion parfois automatique des changements \pause
+		\item Reproductibilité : le résultat sera le même partout. \pause
+			\begin{itemize}
+				\item La fusion n'est faite qu'une fois. \pause
+				\item \LaTeX{} n'a pas autant de fantaisie que Word.
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%*Git permet de maintenir facilement un historique de changements.*
+%Comment ? En calculant les changements par rapport à une version connue.
+%À chaque ensemble de modifications on associe un message qui les... :
+%- résume dans le titre
+%- explique dans le corps du message
+
+
+\end{document}
