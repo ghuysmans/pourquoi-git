@@ -55,7 +55,12 @@
 	\end{itemize}
 \end{frame}
 
+
 \section{Solution}
+\begin{frame}
+	\center
+	\includegraphics[width=\textwidth]{git-desiigner.png}
+\end{frame}
 \begin{frame}
 	\frametitle{Git}
 	Selon les critères exposés juste avant, Git,
@@ -103,11 +108,53 @@
 	\end{itemize}
 \end{frame}
 
-%*Git permet de maintenir facilement un historique de changements.*
-%Comment ? En calculant les changements par rapport à une version connue.
-%À chaque ensemble de modifications on associe un message qui les... :
-%- résume dans le titre
-%- explique dans le corps du message
+\begin{frame}
+	\frametitle{\LaTeX en un slide}
+	Avantages :
+	\begin{itemize}
+		%FIXME pourquoiiiiii
+		%\item <<~Que~>> du texte (éventuellement généré)
+		\item Programmable (langage Turing-complet) :
+			possible d'ajouter des fonctionnalités pour rester cohérent(e)
+		\item Beaucoup d'exemples tout faits sur le Net
+		\item Gratuit, fonctionne partout
+		\item Crée directement un PDF (toujours le même...)
+	\end{itemize}
+	Inconvénients :
+	\begin{itemize}
+		\item Langage pas très joli, un peu limité
+		\item Pas facile à apprendre totalement (généralement pas besoin)
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Fonctionnement général}
+	\begin{itemize}
+		\item Toutes les versions sont archivées (sans doublons) \pause
+		\item Les différences sont calculées à la demande. \pause
+		\item Un ensemble cohérent de changements = un \emph{commit}. \pause
+		\item Pour nous aider, un commit a :
+			\begin{itemize}
+				\item un titre
+				\item une courte description (pas obligatoire) \pause
+				\item un auteur
+				\item une date \pause
+			\end{itemize}
+		\item Tout commit a au moins un parent : celui qu'il a modifié. \pause
+		\item Git retient à quelle version on est à travers des branches.
+			\begin{itemize}
+				\item Une branche contient l'empreinte de son dernier commit
+					\pause
+				\item Une branche avance avec les changements qu'on y fait.
+					\pause
+				\item On travaille directement sur les fichiers !
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+
+%\section{Pratique}
+%choisir une interface graphique ?
 
 
 \end{document}
